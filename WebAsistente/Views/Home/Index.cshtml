@@ -1,13 +1,24 @@
 ﻿@{
-    ViewData["Title"] = "LogIn";
+    ViewData["Title"] = "Log in";
 }
 
-<form asp-controller="Home" asp-action="LogIn" method="post">
-    <div class="card">
-        <input name="user" placeholder="Usuario" required />
-        <input type="password" name="password" placeholder="Contraseña" required />
-        <button type="submit">Ingresar</button>
+<div class="contenedor-login">
+    <div class="centrado-login">
+        <h1>@ViewData["Title"]</h1>
+        <br />
+        <form asp-controller="Home" asp-action="LogIn" method="post">
+            <div class="form-group-login">
+                <input class="input-login" name="user" type="text" placeholder="" required />
+                <label class="label-login">User</label>
+                <br /><br />
+                <input class="input-login" type="password" name="password" placeholder="" required />
+                <label class="label2-login">Password</label>
+                <a class="a-login" href="#">Forgot password?</a>
+                <br /><br />
+                <button class="btn-login" type="submit">Log in</button>
+            </div>
+        </form>
     </div>
-</form>
+</div>
 
 

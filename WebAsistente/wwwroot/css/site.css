@@ -1,22 +1,115 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+
+body, html {
+    height: 100%;
+    margin: 0;
 }
 
-body {
-  margin-bottom: 60px;
+.contenedor-login {
+    display: flex;
+    justify-content: center; /* centra horizontal */
+    align-items: center; /* centra vertical */
+    height: 100vh; /* 100% del alto de la ventana */
+    background-image: url(../imgs/back_login.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.centrado-login {
+    width: auto;
+    height: auto;
+    margin: 5%;
+    background-color: rgba(255, 255, 255, 0.01); /* color blanco con transparencia */
+    backdrop-filter: blur(2.5px); /* aplica el desenfoque */
+    -webkit-backdrop-filter: blur(5px); /* para compatibilidad con Safari */
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* borde sutil */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* sombra ligera */
+    padding: 60px;
+    color: #fff;
+}
+
+
+
+
+.form-group-login {
+    position: relative;
+    width: 250px;
+}
+
+.input-login {
+    width: 100%;
+    padding: 1px;
+    background: transparent;
+    border: 1px solid #007bff;
+    font-size: 16px;
+    outline: none;
+    color: #fff;
+}
+
+.label-login, .label2-login {
+    position: absolute;
+    left: 1px;
+    color: white;
+    background: transparent;
+    padding: 0 4px;
+    transition: 0.2s ease all;
+    pointer-events: none;
+}
+
+.label-login {
+    top: 1px;
+}
+
+.label2-login {
+    top: 52px;
+}
+
+.input-login:focus + .label-login,
+.input-login:not(:placeholder-shown) + .label-login {
+    transform: translateY(-25px);
+    top: 5px;
+    left: 1px;
+    font-size: 13px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.01); /* Blanco translúcido */
+    z-index: 1;
+    padding: 0 4px;
+}
+
+.input-login:focus + .label2-login,
+.input-login:not(:placeholder-shown) + .label2-login {
+    transform: translateY(-25px);
+    top: 55px;
+    left: 1px;
+    font-size: 13px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.01); /* Blanco translúcido */
+    z-index: 1;
+    padding: 0 4px;
+}
+
+.btn-login {
+    border: 1px solid #007bff;
+    color: white;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.a-login {
+    color: white;
 }
